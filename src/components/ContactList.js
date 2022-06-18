@@ -1,6 +1,6 @@
 
 //rcf o shorcut function
-export default function ContactList({pictureUrl, name, popularity, wonOscar, wonEmmy}) {
+export default function ContactList({id,pictureUrl, name, popularity, wonOscar, wonEmmy, deleteContact}) {
    
     
     return (
@@ -10,6 +10,8 @@ export default function ContactList({pictureUrl, name, popularity, wonOscar, won
     <p> Popularity: {popularity}</p>
     {wonOscar && <p >Oscars awarded</p>}
     {wonEmmy && <p >Emmy awarded</p>}
+    {/* <button onClick={()=>deleteContact(id)}>Delete</button> */}
+    <button onClick={() => deleteContact(id)}>Delete</button>
     </div>
   )
 }
